@@ -58,6 +58,32 @@ document.addEventListener('DOMContentLoaded', () => {
     lb.addEventListener('click', () => lb.classList.remove('on'));
   }
 
+  // photography
+  if (CONFIG.photos && CONFIG.photos.length) {
+    const CAM = SV('<path d="M3 8a2 2 0 012-2h2l1.5-2h7L17 6h2a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><circle cx="12" cy="13" r="3.5"/>');
+    $('photoGrid').innerHTML = CONFIG.photos.map(p => `
+      <figure><span class="cam">${CAM}Camera settings only</span>
+      <img loading="lazy" src="${esc(p.src)}" alt="${esc(p.note)}" onerror="imgFallback(this)">
+      <figcaption><b>${esc(p.title)}</b><span>${esc(p.note)}</span></figcaption></figure>`).join('');
+    $('photoGrid').querySelectorAll('img').forEach(i => i.addEventListener('click', () => { lb.querySelector('img').src = i.src; lb.classList.add('on'); }));
+  } else $('photography').hidden = true;
+
+  // case study
+  const cs = CONFIG.caseStudy;
+  if (cs) {
+    $('csEyebrow').textContent = cs.eyebrow; $('csTitle').textContent = cs.title; $('csLead').textContent = cs.lead;
+    $('csSteps').innerHTML = cs.steps.map((s, i) => `<div class="card"><div class="n">0${i + 1}</div><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p></div>`).join('');
+    $('csBA').innerHTML = `<img src="${esc(cs.after.src)}" alt="${esc(cs.after.label)}" onerror="imgFallback(this)">
+      <img class="b" src="${esc(cs.before.src)}" alt="${esc(cs.before.label)}" onerror="imgFallback(this)">
+      <span class="tg l">${esc(cs.before.label)}</span><span class="tg r">${esc(cs.after.label)}</span>
+      <i class="hd"></i><input type="range" min="0" max="100" value="50" aria-label="Before and after">`;
+    $('csBA').querySelector('input').addEventListener('input', e => $('csBA').style.setProperty('--p', e.target.value + '%'));
+    $('csDiff').textContent = cs.diff;
+    $('csGallery').innerHTML = cs.gallery.map(g => `<figure><img loading="lazy" src="${esc(g.src)}" alt="${esc(g.title)}" onerror="imgFallback(this)">
+      <figcaption><b>${esc(g.title)}</b><span>${esc(g.note)}</span></figcaption></figure>`).join('');
+    $('csGallery').querySelectorAll('img').forEach(i => i.addEventListener('click', () => { lb.querySelector('img').src = i.src; lb.classList.add('on'); }));
+  } else $('case').hidden = true;
+
   // modal
   const modal = $('videoModal'), mc = $('modalContent');
   const openModal = (url, vertical) => {

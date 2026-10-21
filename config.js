@@ -45,6 +45,33 @@ const CONFIG = {
     { id: "uxa4Tz36lHw", title: "دي مش مجرد بداية دي بداية حكاية" }
   ],
 
+  // صور التصوير (كلها بإعدادات الكاميرا فقط)
+  photos: [
+    { src: "p1.jpg", title: "Shot with camera settings only", note: "Blur & focus effect" },
+    { src: "p2.jpg", title: "Shot with camera settings only", note: "Low light at dusk" },
+    { src: "p3.jpg", title: "Shot with camera settings only", note: "Pro mode · ISO 125 · 1/80s · EV 0 · WB 5200K" }
+  ],
+
+  // Case study (قسم دراسة الحالة)
+  caseStudy: {
+    eyebrow: "Case study · Personal project",
+    title: "GAZA — From Ashes, We Rise",
+    lead: "One poster, from a blank page to the final version: how I planned it, reviewed it and refined it.",
+    steps: [
+      { t: "Idea",       d: "Define the message first, then the keywords and the design type: social post, poster or flyer." },
+      { t: "Mood board", d: "Collect visual references from Instagram, Behance and Pinterest, and note the sources." },
+      { t: "Sketch",     d: "Rough the layout on paper so the composition is decided before the details." },
+      { t: "Review",     d: "Mark what to fix on the first version (light, sky, focus, text), then build the final." }
+    ],
+    before: { src: "g1.jpg", label: "First version" },
+    after:  { src: "d2.jpg", label: "Final" },
+    diff: "Drag the slider. The final version has warmer light, rays on the child, birds in the sky, a glowing flag and a line about hope instead of loss.",
+    gallery: [
+      { src: "g2.jpg", title: "Planning notes", note: "Keywords, design type, mood board and sources" },
+      { src: "g3.jpg", title: "Review marks",   note: "What I marked to fix on the first version" }
+    ]
+  },
+
   videos: [
     { id: "Ye7b_9H83wA", platform: "youtube", title: "أول فيديو لي على البرمير - هل يستحق المشاهدة؟", category: "Edit", tags: [], featured: true },
     { id: "1188893778",  platform: "vimeo",   title: "أول فيديو لمحاولة الحفاظ على الملامح",          category: "AI",   tags: [], featured: false }
