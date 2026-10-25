@@ -52,6 +52,17 @@ const CONFIG = {
     { src: "p3.jpg", title: "Shot with camera settings only", note: "Pro mode · ISO 125 · 1/80s · EV 0 · WB 5200K" }
   ],
 
+  // AI Visuals (فيديو الـ AI)
+  aiVisuals: {
+    eyebrow: "AI Visuals",
+    title: "Low-key, <span class=\"script\">cinematic</span>.",
+    lead: "A concept sequence made with AI tools. I direct the look: warm low-key light, tight close-ups and a shallow depth of field.",
+    video: "ai-visuals.mp4",
+    poster: "ai-poster.jpg",
+    badge: "AI-generated concept",
+    points: ["Look: warm, low-key lamp light", "Shots: notebook, close-ups, keyboard", "Format: 9:16 · 16 seconds"]
+  },
+
   // Case study (قسم دراسة الحالة)
   caseStudy: {
     eyebrow: "Case study · Personal project",

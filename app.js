@@ -68,6 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
     $('photoGrid').querySelectorAll('img').forEach(i => i.addEventListener('click', () => { lb.querySelector('img').src = i.src; lb.classList.add('on'); }));
   } else $('photography').hidden = true;
 
+  // AI visuals
+  const ai = CONFIG.aiVisuals;
+  if (ai) {
+    $('aiEyebrow').textContent = ai.eyebrow; $('aiTitle').innerHTML = ai.title; $('aiLead').textContent = ai.lead; $('aiBadge').textContent = ai.badge;
+    $('aiPoints').innerHTML = ai.points.map(p => `<li>${esc(p)}</li>`).join('');
+    const v = $('aiVideo'); v.poster = ai.poster; v.src = ai.video; v.preload = 'metadata';
+    new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { v.play().catch(() => {}); } else v.pause(); }), { threshold: .5 }).observe(v);
+    $('aiSound').addEventListener('click', () => { v.muted = !v.muted; $('aiSound').textContent = v.muted ? 'Tap for sound' : 'Sound on'; if (!v.muted) v.play().catch(() => {}); });
+  } else $('ai').hidden = true;
+
   // case study
   const cs = CONFIG.caseStudy;
   if (cs) {
@@ -151,6 +161,13 @@ document.addEventListener('DOMContentLoaded', () => {
     track('Lead');
     location.href = `mailto:${identity.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
+
+  // active nav link while scrolling
+  const links = [...document.querySelectorAll('nav ul a')];
+  const spy = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  links.forEach(l => { const s = document.querySelector(l.getAttribute('href')); if (s) spy.observe(s); });
 
   // scroll reveal + progress bar
   const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { threshold: .12 });

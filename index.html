@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lalezar&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css?v=8" />
-<script src="config.js?v=8" defer></script>
-<script src="app.js?v=8" defer></script>
+<link rel="stylesheet" href="style.css?v=12" />
+<script src="config.js?v=12" defer></script>
+<script src="app.js?v=12" defer></script>
 
 <!-- Meta Pixel Code -->
 <script>
@@ -40,8 +40,8 @@ src="https://www.facebook.com/tr?id=1689090799053384&ev=PageView&noscript=1"
     <li><a href="#work">Work</a></li>
     <li><a href="#case">Case study</a></li>
     <li><a href="#reels">Reels</a></li>
-    <li><a href="#photography">Photos</a></li>
-    <li><a href="#story">Journey</a></li>
+    <li><a href="#lab">Lab</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </div></nav>
@@ -91,15 +91,28 @@ src="https://www.facebook.com/tr?id=1689090799053384&ev=PageView&noscript=1"
   <div class="reels" id="reelsGrid"></div>
 </div></section>
 
-<section id="photography"><div class="wrap">
-  <div class="eyebrow">Photography</div>
-  <h2>Through my <span class="script">lens</span>.</h2>
-  <p class="lead">Every shot here was taken with camera settings only.</p>
-  <div class="work photos" id="photoGrid"></div>
+<section id="lab"><div class="wrap">
+  <div class="eyebrow">Creative lab</div>
+  <h2>Beyond the <span class="script">brief</span>.</h2>
+  <p class="lead">Side experiments that sharpen my eye: photography using camera settings only, and AI visuals.</p>
+
+  <div id="photography">
+    <h3 class="sub">Photography</h3>
+    <div class="work photos" id="photoGrid"></div>
+  </div>
+
+  <div id="ai">
+    <span id="aiEyebrow" hidden></span>
+    <h3 class="sub" id="aiTitle"></h3>
+    <div class="ai">
+      <div class="phone"><video id="aiVideo" muted loop playsinline preload="none"></video><span class="cam" id="aiBadge"></span><button id="aiSound" class="snd" type="button">Tap for sound</button></div>
+      <div class="ai-text"><p class="lead" id="aiLead"></p><ul id="aiPoints"></ul></div>
+    </div>
+  </div>
 </div></section>
 
-<section><div class="wrap">
-  <div class="eyebrow">Why “Pixel”</div>
+<section id="about"><div class="wrap">
+  <div class="eyebrow">About</div>
   <h2>Every field has its own <span class="script">pixel</span>.</h2>
   <p class="lead">It’s the smallest unit that decides everything, and I pay attention to it in each skill I work with.</p>
   <div class="pix">
@@ -107,11 +120,7 @@ src="https://www.facebook.com/tr?id=1689090799053384&ev=PageView&noscript=1"
     <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg><b>Ads</b><span>The Meta Pixel: tracking what really works</span></div>
     <div><svg viewBox="0 0 24 24"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><b>Web</b><span>The px in CSS: structure and spacing</span></div>
   </div>
-</div></section>
-
-<section id="story"><div class="wrap">
-  <div class="eyebrow">Building in public</div>
-  <h2>Learning out loud.</h2>
+  <h3 class="sub">Building in public</h3>
   <p class="lead">I document what I learn and what I get wrong, because real progress is more useful than polished claims.</p>
   <ol class="steps">
     <li><b>Design</b><span>Photoshop, Canva and AI tools for social content</span></li>

@@ -116,3 +116,24 @@ footer{padding:28px 0;border-top:1px solid var(--border);color:var(--text-second
 #modalClose{position:absolute;top:calc(14px + env(safe-area-inset-top,0));right:16px;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
 @media(max-width:620px){nav ul li:not(:last-child){display:none}.hero{padding-top:56px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+.ai{display:grid;gap:34px;grid-template-columns:minmax(0,340px) 1fr;align-items:center;margin-top:10px}
+.phone{position:relative;aspect-ratio:9/16;border-radius:30px;overflow:hidden;border:1px solid var(--border);box-shadow:0 24px 60px rgba(0,0,0,.5);background:#000}
+.phone video{width:100%;height:100%;object-fit:cover;display:block}
+.phone .cam{top:14px;left:14px}
+.snd{position:absolute;bottom:14px;right:14px;z-index:2;border:0;border-radius:99px;padding:8px 14px;font:600 13px system-ui;background:rgba(0,0,0,.6);color:#fff;backdrop-filter:blur(6px);cursor:pointer}
+.ai-text ul{list-style:none;padding:0;display:grid;gap:10px}
+.ai-text li{border-left:3px solid var(--accent);padding:2px 0 2px 14px;color:var(--text-primary)}
+@media(max-width:700px){.ai{grid-template-columns:1fr}.phone{max-width:340px;margin:0 auto}}
+
+/* ── professional polish: numbering, active nav, lab spacing ── */
+body{counter-reset:sec}
+section .eyebrow::before{counter-increment:sec;content:counter(sec,decimal-leading-zero) "  /  ";color:var(--text-secondary);letter-spacing:.1em}
+nav ul a{position:relative;padding:6px 0;transition:color .2s}
+nav ul a.active{color:var(--text-primary)}
+nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent);transform:scaleX(0);transition:transform .25s}
+nav ul a.active::after{transform:scaleX(1)}
+#lab .sub{margin:46px 0 16px}#lab #photography .sub{margin-top:30px}
+.about-sub,#about .sub{margin:46px 0 10px}
+section{padding:72px 0}
+@media(max-width:620px){section{padding:56px 0}}
