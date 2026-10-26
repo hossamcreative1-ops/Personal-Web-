@@ -137,3 +137,30 @@ nav ul a.active::after{transform:scaleX(1)}
 .about-sub,#about .sub{margin:46px 0 10px}
 section{padding:72px 0}
 @media(max-width:620px){section{padding:56px 0}}
+
+/* ══ Desktop-only polish (>= 900px). Phones/tablets keep the previous look. ══ */
+.mail{display:none}
+@media(min-width:900px){
+  .wrap{max-width:1200px}
+  #designGrid{display:block;column-count:3;column-gap:14px}
+  #designGrid figure{break-inside:avoid;margin:0 0 14px}
+  #designGrid figure img,#designGrid figure.wide img{aspect-ratio:auto;height:auto}
+  #csSteps{grid-template-columns:repeat(4,1fr)}
+  .cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+  .cs-grid .ba{max-width:none;margin:0;aspect-ratio:4/5}
+  .cs-grid .note{grid-column:1/-1;order:9;margin-top:0}
+  #csGallery{display:contents}
+  #csGallery figure{aspect-ratio:4/5}
+  #csGallery figure img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover}
+  .reels{grid-template-columns:repeat(3,minmax(0,300px));max-width:none}
+  .photos{grid-template-columns:repeat(3,1fr);align-items:stretch}
+  .photos figure img{aspect-ratio:4/5;height:auto}
+  .certs{grid-template-columns:repeat(4,1fr)}
+  .contact{display:grid;grid-template-columns:1.05fr 1fr;column-gap:64px;align-content:start;text-align:left}
+  .contact>*{grid-column:1}
+  .contact h2{font-size:clamp(44px,6vw,80px)}
+  .contact .lead{margin-inline:0}
+  .contact .row{justify-content:flex-start;margin-top:22px}
+  .mail{display:inline-block;font:500 18px var(--font-mono,ui-monospace,monospace);color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px;justify-self:start}
+  .contact #contactForm{grid-column:2;grid-row:1/span 6;max-width:none;margin:0;background:var(--bg-card);border:1px solid var(--border);border-radius:22px;padding:26px}
+}
