@@ -32,8 +32,8 @@ const CONFIG = {
   social: {
     behance:   "https://www.behance.net/ef55c0e3",
     linkedin:  "",
-    instagram: "https://www.instagram.com/3bgwed/?hl=ar",
-    youtube:   "https://www.youtube.com/@hossam_abdel_gawed",
+    instagram: "https://www.instagram.com/hossamcreative1/",
+    youtube:   "https://www.youtube.com/@hossamcreative1",
     vimeo:     "",
     email:     "hossam.creative1@gmail.com",
   },
