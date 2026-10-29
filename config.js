@@ -10,7 +10,7 @@ const CONFIG = {
     title: "Visual Content Creator",
     tagline: "Social Media Design · Reels Editing · Meta Ads",
     subtag: "Turning ideas into tangible results",
-    bio: "I’m Hossam, a visual content creator. I design social media content, edit Reels that hold attention, and run Meta Ads that are built to be measured.",
+    bio: "بساعد العلامات التجارية على تقديم محتوى بصري جذاب من خلال تصميمات السوشيال ميديا، مع دعم المحتوى بالفيديو والإعلانات الرقمية.",
     email: "hossam.creative1@gmail.com",
     location: "Egypt",
   },
