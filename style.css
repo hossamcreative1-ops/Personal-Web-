@@ -1,4 +1,4 @@
-:root{--accent:#ff6a4d;--accent-light:#ff9d85;--accent-glow:#ff6a4d40;--bg:#121110;--bg-card:#1b1a18;--bg-card-hover:#232120;--surface:#1b1a18;--border:#2e2c29;--text-primary:#f3f1ec;--text-secondary:#a09c94;--text-muted:#6b6860;--teal:#2dd4bf;color-scheme:dark}
+:root{--accent:#f5b83d;--accent-light:#ffd98a;--accent-glow:#f5b83d40;--bg:#121110;--bg-card:#1b1a18;--bg-card-hover:#232120;--surface:#1b1a18;--border:#2e2c29;--text-primary:#f3f1ec;--text-secondary:#a09c94;--text-muted:#6b6860;--teal:#2dd4bf;color-scheme:dark}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{background:var(--bg);color:var(--text-primary);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:env(safe-area-inset-bottom,0)}
@@ -72,7 +72,7 @@ svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-lin
 .play svg{width:24px;height:24px;fill:#fff;stroke:none;margin-left:3px}
 .note{margin-top:16px;font-size:14px;color:var(--text-secondary)}.note a{text-decoration:underline}
 .reels{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));max-width:760px}
-.reel{position:relative;aspect-ratio:9/16;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;padding:18px;color:#fff;background:linear-gradient(170deg,var(--accent),#6b1a0e);cursor:pointer;transition:transform .3s,box-shadow .3s;border:0;font:inherit}
+.reel{position:relative;aspect-ratio:9/16;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;padding:18px;color:#fff;background:linear-gradient(170deg,var(--accent),#5c3d05);cursor:pointer;transition:transform .3s,box-shadow .3s;border:0;font:inherit}
 .reel:nth-child(2){background:linear-gradient(170deg,var(--teal),#053b36)}
 .reel:nth-child(3){background:linear-gradient(170deg,#f59e0b,#7c3f00)}
 .reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
@@ -168,7 +168,7 @@ section{padding:72px 0}
 /* ── About: portrait ── */
 .about-grid{display:grid;grid-template-columns:1fr;gap:30px;align-items:center;margin-top:6px}
 .about-photo{position:relative;max-width:340px;margin:0 auto;width:100%;aspect-ratio:4/5;border-radius:28px;overflow:hidden;border:1px solid var(--border);display:flex;align-items:flex-end;justify-content:center;
-  background:radial-gradient(circle at 50% 34%,rgba(255,138,61,.55),rgba(255,138,61,.16) 48%,transparent 72%),linear-gradient(180deg,#1f1813,#141211)}
+  background:radial-gradient(circle at 50% 34%,rgba(245,184,61,.55),rgba(245,184,61,.16) 48%,transparent 72%),linear-gradient(180deg,#1f1813,#141211)}
 .about-photo img{position:relative;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 18px 26px rgba(0,0,0,.5))}
 .about-bio{color:var(--text-primary);max-width:34em;margin:0 0 26px}
 .about-copy .pix{margin-top:6px}
@@ -187,9 +187,14 @@ section{padding:72px 0}
   .tagrow .tag{margin-bottom:0}
   .hero h1{max-width:9em}
   .hero-photo{display:block;position:relative;justify-self:end;width:100%;max-width:440px;animation:up .9s .3s both}
-  .hero-photo::before{content:"";position:absolute;left:-6%;right:-6%;bottom:0;top:6%;border-radius:50% 50% 0 0/38% 38% 0 0;background:radial-gradient(circle at 50% 40%,rgba(255,138,61,.6),rgba(255,138,61,.15) 55%,transparent 75%)}
+  .hero-photo::before{content:"";position:absolute;left:-6%;right:-6%;bottom:0;top:6%;border-radius:50% 50% 0 0/38% 38% 0 0;background:radial-gradient(circle at 50% 40%,rgba(245,184,61,.6),rgba(245,184,61,.15) 55%,transparent 75%)}
   .hero-photo img{position:relative;display:block;width:100%;height:auto;filter:drop-shadow(0 20px 30px rgba(0,0,0,.45))}
 }
 
 /* Arabic hero description: hug the text, keep Arabic line-height */
 .hero p[dir=auto]{width:fit-content;max-width:34em;line-height:1.9}
+
+/* header logo mark */
+.logo{display:flex;align-items:center;gap:10px}
+.logo .mark{width:36px;height:36px;flex:none}
+.logo .wm{font-style:normal}

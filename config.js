@@ -16,9 +16,9 @@ const CONFIG = {
   },
 
   theme: {
-    accent:        "#ff6a4d",
-    accentLight:   "#ff9d85",
-    accentGlow:    "#ff6a4d40",
+    accent:        "#f5b83d",
+    accentLight:   "#ffd98a",
+    accentGlow:    "#f5b83d40",
     bg:            "#121110",
     bgCard:        "#1b1a18",
     bgCardHover:   "#232120",
