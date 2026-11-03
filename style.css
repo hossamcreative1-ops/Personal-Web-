@@ -177,7 +177,7 @@ section{padding:72px 0}
 /* ── Hero portrait ── */
 .tagrow{display:flex;align-items:center;gap:12px;margin-bottom:22px}
 .tagrow .tag{margin-bottom:0}
-.avatar{width:54px;height:54px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--border);background:radial-gradient(circle at 50% 40%,#ff8a3d,#2a170d)}
+.avatar{width:54px;height:54px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--border);background:radial-gradient(circle at 50% 40%,#f5b83d,#2a170d)}
 .hero-photo{display:none}
 @media(min-width:900px){
   .hero{padding-bottom:0}
